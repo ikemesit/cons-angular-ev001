@@ -1,0 +1,62 @@
+/********************/
+/** Common STYLING **/
+/********************/
+.DivSelectyze {
+	position:relative;
+	width:100%;
+	float:left;
+}
+.DivSelectyze .selectyzeValue {
+	position:relative;
+	z-index:10;
+	display:block;
+	text-decoration:none;
+}
+.DivSelectyze ul {list-style:none;}
+.DivSelectyze .UlSelectize {
+	position:absolute;
+	z-index:9999;
+	display:none;
+}
+.DivSelectyze li a {
+	display:block;
+	text-decoration:none;
+}
+.optgroupTitle {
+	display:block;
+}
+
+/**********************
+/*   OPTION-1 THEME   *
+*********************/
+.option1 .selectyzeValue {
+    background: url("../images/option.png") no-repeat scroll 95% center #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    color: #7E7E7E;
+    font-size: 17px;
+    height: 52px;
+    line-height: 3;
+    padding: 0 25px;
+    width: 100%;
+}
+.option1 .UlSelectize {
+	top:40px;
+	left:-40px;
+	min-height:36px;
+	border:1px solid #d7dbdd;
+	border-top:0;
+	border-bottom:0;
+}
+.option1 li a {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D7DBDD;
+    color: #585A5A;
+    padding: 8px 14px;
+    width: 100%;
+}
+.option1 .UlSelectize {
+  left: 0;
+  padding: 0;
+  width: 100%;
+}
