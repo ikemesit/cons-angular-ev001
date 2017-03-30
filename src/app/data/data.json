@@ -1,0 +1,134 @@
+[
+    {
+        "usuario": "Mark",
+        "rol": {
+            "idrol": "3",
+            "desrol": "A new rol",
+            "usumod": "Project Administrator",
+            "fecmod": ""
+        },
+        "email": "email@email.com",
+        "indactivo": "true",
+        "usumod": "Project Administrator",
+        "nombreUsuario": "Mark",
+        "fecmod": "",
+        "usuBusPaisList": [
+            {
+                "idempr": "013",
+                "usuario": "Mark",
+                "idbuss": "1234",
+                "codpais": "E001",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            },
+            {
+                "idempr": "014",
+                "usuario": "Mark",
+                "idbuss": "1234",
+                "codpais": "E002",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            }
+        ],
+        "isNew": true
+    },
+    {
+        "usuario": "John",
+        "rol": {
+            "idrol": "4",
+            "desrol": "A new rol",
+            "usumod": "Team Leader",
+            "fecmod": ""
+        },
+        "email": "email@email.com",
+        "indactivo": "true",
+        "usumod": "codeUser",
+        "nombreUsuario": "John",
+        "fecmod": "",
+        "usuBusPaisList": [
+            {
+                "idempr": "013",
+                "usuario": "codeUser",
+                "idbuss": "1234",
+                "codpais": "E001",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            },
+            {
+                "idempr": "014",
+                "usuario": "codeUser",
+                "idbuss": "1234",
+                "codpais": "E002",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            }
+        ],
+        "isNew": true
+    },
+    {
+        "usuario": "Joseph",
+        "rol": {
+            "idrol": "5",
+            "desrol": "A new rol",
+            "usumod": "Scrum Coach",
+            "fecmod": ""
+        },
+        "email": "email@email.com",
+        "indactivo": "true",
+        "usumod": "codeUser",
+        "nombreUsuario": "Joseph",
+        "fecmod": "",
+        "usuBusPaisList": [
+            {
+                "idempr": "013",
+                "usuario": "codeUser",
+                "idbuss": "1234",
+                "codpais": "E001",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            },
+            {
+                "idempr": "014",
+                "usuario": "codeUser",
+                "idbuss": "1234",
+                "codpais": "E002",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            }
+        ],
+        "isNew": true
+    },
+    {
+        "usuario": "Jane",
+        "rol": {
+            "idrol": "6",
+            "desrol": "A new rol",
+            "usumod": "Scrum Coach",
+            "fecmod": ""
+        },
+        "email": "email@email.com",
+        "indactivo": "true",
+        "usumod": "codeUser",
+        "nombreUsuario": "Jane",
+        "fecmod": "",
+        "usuBusPaisList": [
+            {
+                "idempr": "013",
+                "usuario": "codeUser",
+                "idbuss": "1234",
+                "codpais": "E001",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            },
+            {
+                "idempr": "014",
+                "usuario": "codeUser",
+                "idbuss": "1234",
+                "codpais": "E002",
+                "usu": "codeUserAdmin",
+                "fec": "2017/03/28"
+            }
+        ],
+        "isNew": true
+    }
+]

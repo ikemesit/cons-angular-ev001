@@ -1,4 +1,4 @@
-describe('main component', () => {
+describe('user admin component', () => {
   beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainHeaderDirective', () => {
       return {};

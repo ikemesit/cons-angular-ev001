@@ -1,10 +1,12 @@
 @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import 'app/style-imports/fonts';
 @import 'app/style-imports/select';
 
 body {
 background-color:#F6EAEA;
+  @include opensans-regular;
   color: #585A5A;
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
 a{

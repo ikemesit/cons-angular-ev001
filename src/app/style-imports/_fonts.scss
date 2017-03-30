@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700');
+
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+$font-family: 'Open Sans', sans-serif;
+
+@mixin opensans-regular(){
+    font-weight: $regular;
+    font-family: $font-family;
+}
+
+@mixin opensans-regular-italic(){
+    font-weight: $regular;
+    font-family: $font-family;
+    font-style: italic;
+}
+
+@mixin opensans-semibold(){
+    font-weight: $semi-bold;
+    font-family: $font-family;
+}
+
+@mixin opensans-bold(){
+    font-weight: $bold;
+    font-family: $font-family;
+}

@@ -8,8 +8,12 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('app', {
+    .state('admin', {
       url: '/',
-      component: 'userAdminPage'
+      component: 'userAdmin'
+    })
+    .state('edit', {
+      url: '/edit',
+      component: 'userAdminEdit'
     });
 }

@@ -5,18 +5,15 @@
       <div class="form-group">
         <div class="user_admin_left">
           <label for="role">Role</label>
-          <select name="" id="role" class="selectyze1">
-								<option value="">Portfolio Manager</option>
-								<option value="">Portfolio 1</option>
-								<option value="">Portfolio 2</option>
+          <select name="" id="role" class="selectyze1" ng-options="role.usumod for role in $ctrl.roles track by $index" ng-model="$ctrl.selectedRole"
+            ng-change="$ctrl.loadUsersByRole()">
+								<option value="">Select a Role</option>
 							</select>
         </div>
         <div class="user_admin_right">
           <label for="segment">Segment</label>
-          <select name="" id="segment" class="selectyze2">
+          <select name="" id="segment" class="selectyze2" ng-options="user.usuario for user in $ctrl.usersByRole" ng-model="$ctrl.selectedUser">
 								<option value="">Select a segment</option>
-								<option value="">segment 1</option>
-								<option value="">segment 2</option>
 							</select>
         </div>
         <div class="clearfix"></div>
@@ -28,6 +25,7 @@
         </div>
       </div>
       <p class="btm_text">Select a segment or search by name</p>
+      <p class="btm_text">{{ $ctrl.selectedRole }}</p>
     </div>
   </div>
 </div>
