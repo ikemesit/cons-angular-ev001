@@ -13,7 +13,13 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
       component: 'userAdmin'
     })
     .state('edit', {
-      url: '/edit',
-      component: 'userAdminEdit'
+      url: '/edit/{userName}',
+      component: 'userAdminEdit',
+      resolve: {
+        user: ['dataService', '$transition$', '$log', function (dataService: any, $transition$: any, $log: angular.ILogService) {
+          // $log.info($transition$.params().userName);
+          return dataService.getUser($transition$.params().userName).then(response => { return response[0]; });
+        }]
+      }
     });
 }

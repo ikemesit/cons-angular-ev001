@@ -1,11 +1,20 @@
-
-'use strict';
-
+/** @ngInject */
 class DataService {
     public mockDataUrl: string = 'app/data/data.json';
     private data: any;
 
     constructor(private $http: angular.IHttpService, private $log: angular.ILogService) { }
+
+    public getUsers() {
+        return this.$http
+            .get(this.mockDataUrl)
+            .then(response => {
+                return response.data;
+            })
+            .catch(err => {
+                return err;
+            });
+    }
 
     public getUser(username: string) {
         return this.$http
@@ -16,7 +25,8 @@ class DataService {
                 return this.data.filter(user => {
                     return user.nombreUsuario === username;
                 });
-            }).catch(err => {
+            })
+            .catch(err => {
                 return err;
             });
     }
@@ -29,21 +39,22 @@ class DataService {
                 return this.data.map(user => {
                     return user.rol;
                 });
-            }).catch(err => {
+            })
+            .catch(err => {
                 return err;
             });
     }
 
-    public getUsersBySegRol(roleId: any) {
+    public getUsersBySegRol(roleId: any, searchName: string) {
         return this.$http
             .get(this.mockDataUrl)
             .then(response => {
                 this.data = response.data;
                 return this.data.filter(user => {
-                    return user.rol.idrol === roleId;
+                    return user.rol.idrol === roleId || user.usuario === searchName;
                 });
-                // this.$log.info('Returned from service => ' + angular.toJson(this.data));
-            }).catch(err => {
+            })
+            .catch(err => {
                 return err;
             });
     }

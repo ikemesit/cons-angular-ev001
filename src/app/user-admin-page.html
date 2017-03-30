@@ -5,27 +5,38 @@
       <div class="form-group">
         <div class="user_admin_left">
           <label for="role">Role</label>
-          <select name="" id="role" class="selectyze1" ng-options="role.usumod for role in $ctrl.roles track by $index" ng-model="$ctrl.selectedRole"
-            ng-change="$ctrl.loadUsersByRole()">
-								<option value="">Select a Role</option>
-							</select>
+          <div class="DivSelectyze option1">
+            <a href="#" rel="" class="selectyzeValue" ng-click="$ctrl.showLeftSelect = !$ctrl.showLeftSelect">{{ $ctrl.selectedRole.usumod }}</a>
+            <ul class="UlSelectize" ng-class="{'slideSelectDown': $ctrl.showLeftSelect}">
+              <li ng-repeat="role in $ctrl.roles track by $index" ng-click="$ctrl.selectedRole = role; $ctrl.loadUsersByRole(); $ctrl.showLeftSelect = !$ctrl.showLeftSelect">
+                <a rel="" href="#">{{ role.usumod }}</a></li>
+            </ul>
+          </div>
         </div>
         <div class="user_admin_right">
           <label for="segment">Segment</label>
-          <select name="" id="segment" class="selectyze2" ng-options="user.usuario for user in $ctrl.usersByRole" ng-model="$ctrl.selectedUser">
-								<option value="">Select a segment</option>
-							</select>
+          <div class="DivSelectyze option1">
+            <a href="#" rel="" class="selectyzeValue" ng-click="$ctrl.showRightSelect = !$ctrl.showRightSelect">{{ $ctrl.selectedUser.usuario }}</a>
+            <ul class="UlSelectize" ng-class="{'slideSelectDown': $ctrl.showRightSelect}">
+              <li ng-repeat="user in $ctrl.usersByRole track by $index" ng-click="$ctrl.selectedUser = user; $ctrl.showRightSelect = !$ctrl.showRightSelect">
+                <a rel="" href="#">{{ user.usuario }}</a></li>
+            </ul>
+          </div>
         </div>
         <div class="clearfix"></div>
       </div>
       <div class="form-group">
         <div class="name_search_box search_box">
-          <input type="search" name="" id="" placeholder="Type name..." />
+          <input type="search" name="" id="" placeholder="Type name..." ng-model="$ctrl.search" />
           <button class="search_btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+          <ul id="myUL">
+            <li><a ui-sref="edit({userName: user.nombreUsuario})" ng-if="user" ng-repeat="user in ($ctrl.users | filter: $ctrl.search) track by $index">{{ user.usuario }}</a></li>
+          </ul>
         </div>
       </div>
       <p class="btm_text">Select a segment or search by name</p>
       <p class="btm_text">{{ $ctrl.selectedRole }}</p>
+      <!--<p class="btm_text">{{ $ctrl.selectedUser }}</p>-->
     </div>
   </div>
 </div>

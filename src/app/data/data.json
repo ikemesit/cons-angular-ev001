@@ -7,7 +7,7 @@
             "usumod": "Project Administrator",
             "fecmod": ""
         },
-        "email": "email@email.com",
+        "email": "mark@mail.com",
         "indactivo": "true",
         "usumod": "Project Administrator",
         "nombreUsuario": "Mark",
@@ -40,7 +40,7 @@
             "usumod": "Team Leader",
             "fecmod": ""
         },
-        "email": "email@email.com",
+        "email": "john@mail.com",
         "indactivo": "true",
         "usumod": "codeUser",
         "nombreUsuario": "John",
@@ -73,7 +73,7 @@
             "usumod": "Scrum Coach",
             "fecmod": ""
         },
-        "email": "email@email.com",
+        "email": "Joseph@mail.com",
         "indactivo": "true",
         "usumod": "codeUser",
         "nombreUsuario": "Joseph",

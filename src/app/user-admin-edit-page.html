@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="container_wrp">
-    <h1 class="title_text">Edit User<a href="/" class="back_user_admin_btn">Back to user admin <i class="fa fa-chevron-right"></i></a></h1>
+    <h1 class="title_text">Edit User<a ui-sref="admin" class="back_user_admin_btn">Back to user admin <i class="fa fa-chevron-right"></i></a></h1>
     <div class="user_box_wrp user_admin_edit_box">
       <form action="">
         <div class="top_active_row">
-          <h2 class="name_title">Helmy Nagashima</h2>
+          <h2 class="name_title">{{ $ctrl.user.usuario }}</h2>
           <span class="top_active">
 								<!-- <span class="top_active_toggle">Active</span> -->
           <label class="switch_toggle active">
@@ -17,25 +17,27 @@
         <div class="form-group">
           <label for="role" class="label_left">Role</label>
           <div class="col_right">
-            <select name="" id="role" class="selectyze1">
-									<option value="">Administrator</option>
-									<option value="">Administrator 1</option>
-									<option value="">Administrator 2</option>
-								</select>
+            <div class="DivSelectyze option1">
+              <a href="#" rel="" class="selectyzeValue" ng-click="$ctrl.showSelect = !$ctrl.showSelect">{{ $ctrl.selectedRole.usu }}</a>
+              <ul class="UlSelectize" ng-class="{'slideSelectDown': $ctrl.showSelect}">
+                <li ng-repeat="role in $ctrl.user.usuBusPaisList track by $index" ng-click="$ctrl.selectedRole = role; $ctrl.showSelect = !$ctrl.showSelect">
+                  <a rel="" href="#">{{ role.usu }}</li>
+              </ul>
+            </div>
           </div>
           <div class="clearfix"></div>
         </div>
         <div class="form-group">
           <label for="uid" class="label_left">uid</label>
           <div class="col_right">
-            <input type="text" name="" id="uid" />
+            <input type="text" name="" id="uid" ng-model="$ctrl.user.rol.idrol" />
           </div>
           <div class="clearfix"></div>
         </div>
         <div class="form-group">
           <label for="email" class="label_left">E-Mail</label>
           <div class="col_right">
-            <input type="email" name="" id="email" />
+            <input type="email" name="" id="email" ng-model="$ctrl.user.email" />
           </div>
           <div class="clearfix"></div>
         </div>

@@ -1,15 +1,31 @@
 /** @ngInject */
 class UserAdminController {
   public user: string;
+  public users: any[];
   public roles: any[];
-  public selectedUser: any;
-  public selectedRole: any;
   public usersByRole: any[];
+  public search: string;
+  public searchResults: any[];
+
+  public selectedUser: any = {
+    usuario: 'Select a segment'
+  };
+  public selectedRole: any = {
+    usumod: 'Select a Role'
+  };
 
   constructor(private dataService: any, private $log: angular.ILogService) { }
 
   $onInit() {
     this.getRoles();
+    this.loadAllUsers();
+    this.search = null;
+  }
+
+  loadAllUsers() {
+    this.dataService.getUsers().then(response => {
+      this.users = response;
+    });
   }
 
   loadDataUser(username: string) {
@@ -35,6 +51,15 @@ class UserAdminController {
       this.$log.info('returned UsersByRole from component => ' + angular.toJson(this.usersByRole));
     });
   }
+
+  // searchUserByIdOrName(event: any) {
+  //   let searchTerm = this.search || null;
+  //   this.dataService.getUsersBySegRol(event).then(response => {
+  //     this.searchResults = response;
+  //   });
+  // }
+
+
 }
 
 
